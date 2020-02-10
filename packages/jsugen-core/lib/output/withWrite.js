@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs-extra';
 import { from } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { castArray, isEmpty } from 'lodash-es';
+import { castArray, isEmpty } from 'lodash';
 import { DRY_RUN_BANNER } from '../constants';
 import { logIf } from '../utils/log';
 import { withPrependToString } from '../utils';

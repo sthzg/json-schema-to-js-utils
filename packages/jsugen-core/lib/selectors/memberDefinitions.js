@@ -1,4 +1,4 @@
-import { get } from 'lodash-es';
+import { get } from 'lodash';
 import { byPathNodesIsEnumLeaf, byPathNodesLastMember } from './pathNodes';
 
 export function byMemberDefinitionId(memberDefinition) {

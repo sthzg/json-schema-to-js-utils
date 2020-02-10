@@ -9,8 +9,8 @@ import {
   withWrite,
   enrichWithPathNodeVars,
 } from '@sthzg/jsugen-core';
-import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
-import { fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
+import { $fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
+import { $fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
 import { buildTemplateVars } from './buildTemplateVars';
 import { template as enumModuleTemplate } from './enum.tpl';
 
@@ -29,8 +29,8 @@ export function generate({ sourceFile, writeConfig }) {
   // ---
   // Observable.
   // ---
-  return fromSourceFile(sourceFile).pipe(
-    concatMap(fromJsonSchema),
+  return $fromSourceFile(sourceFile).pipe(
+    concatMap($fromJsonSchema),
 
     /* Filtering */
     filter(byMemberDefinitionIsEnum),

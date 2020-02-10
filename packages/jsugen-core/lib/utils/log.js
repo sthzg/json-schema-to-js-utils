@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { isFunction, noop } from 'lodash-es';
+import { isFunction, noop } from 'lodash';
 
 export function log(...args) {
   return console.log(...args);

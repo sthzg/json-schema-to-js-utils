@@ -1,4 +1,4 @@
-import { fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
+import { $fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
 import { concatMap, map, reduce } from 'rxjs/operators';
 import {
   addMemberDefinitionsForNonEnumArrayIndexes,
@@ -10,7 +10,7 @@ import {
   withCompileToTemplate,
   withWrite,
 } from '@sthzg/jsugen-core';
-import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
+import { $fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
 import { template as objectPathConstantTemplate } from './objectPathConst.tpl';
 
 export function generate({ sourceFile, writeConfig }) {
@@ -28,8 +28,8 @@ export function generate({ sourceFile, writeConfig }) {
   // ---
   // Observable.
   // ---
-  return fromSourceFile(sourceFile).pipe(
-    concatMap(fromJsonSchema),
+  return $fromSourceFile(sourceFile).pipe(
+    concatMap($fromJsonSchema),
 
     /* Templating */
     map(enrichWithPathNodeVars),

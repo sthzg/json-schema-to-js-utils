@@ -1,4 +1,4 @@
-import { castArray, merge, isEmpty, isString, isNumber } from 'lodash-es';
+import { castArray, merge, isEmpty, isString, isNumber } from 'lodash';
 import { toUpperSnakeCase } from './format';
 
 /**

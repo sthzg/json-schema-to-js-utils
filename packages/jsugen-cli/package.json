@@ -35,6 +35,6 @@
     "@sthzg/jsugen-generate-member-names": "^0.16.2",
     "@sthzg/jsugen-generate-selector-functions": "^0.16.2",
     "esm": "^3.2.22",
-    "yargs": "^14.2.0"
+    "yargs": "^15.1.0"
   }
 }

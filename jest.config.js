@@ -6,7 +6,10 @@ module.exports = {
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
   testMatch: ['**/__tests__/**/?(*.)+(spec|test).[jt]s?(x)'],
-  transformIgnorePatterns: ['/node_modules/(?!lodash-es|@sthzg).+\\.js$'],
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
+  transformIgnorePatterns: ['/node_modules/(?!@sthzg).+\\.[jt]s$'],
   watchPlugins: [
     'jest-watch-typeahead/filename',
     'jest-watch-typeahead/testname',

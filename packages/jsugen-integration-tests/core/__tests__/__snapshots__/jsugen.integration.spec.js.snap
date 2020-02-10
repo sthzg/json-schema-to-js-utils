@@ -5,7 +5,7 @@ exports[`main: dry run should glob the expected files and run the configured gen
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
-import get from 'lodash-es/get';
+import get from 'lodash/get';
 
 export function byHello(property, defaultReturn) {
   return get(property, ['hello'], defaultReturn);
@@ -21,7 +21,7 @@ export const byHelloPath = () => ['hello'];
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
-import get from 'lodash-es/get';
+import get from 'lodash/get';
 
 export function byWorld(property, defaultReturn) {
   return get(property, ['world'], defaultReturn);

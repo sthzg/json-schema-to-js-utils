@@ -9,8 +9,8 @@ import {
   withCompileToTemplate,
   withWrite,
 } from '@sthzg/jsugen-core';
-import { fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
-import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
+import { $fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
+import { $fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
 import { template as memberNamesTemplate } from './memberNames.tpl';
 
 export function generate({ sourceFile, writeConfig }) {
@@ -28,8 +28,8 @@ export function generate({ sourceFile, writeConfig }) {
   // ---
   // Observable.
   // ---
-  return fromSourceFile(sourceFile).pipe(
-    concatMap(fromJsonSchema),
+  return $fromSourceFile(sourceFile).pipe(
+    concatMap($fromJsonSchema),
 
     /* Templating */
     map(enrichWithPathNodeVars),

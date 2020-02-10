@@ -7,33 +7,41 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "eslint": "^6.5.1",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@types/jest": "^25.1.2",
+    "@types/lodash-es": "^4.17.3",
+    "@types/node": "^13.7.0",
+    "@types/prettier": "^1.19.0",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "chalk": "^3.0.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-mocha": "^6.2.0",
-    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-mocha": "^6.2.2",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
-    "husky": "^3.0.9",
-    "jest": "^24.9.0",
-    "jest-watch-typeahead": "^0.4.0",
-    "lerna": "^3.18.1",
-    "lint-staged": "^9.4.2",
-    "lodash-es": "^4.17.15",
-    "prettier": "^1.17.0",
-    "pretty-quick": "^2.0.0"
+    "execa": "^4.0.0",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "jest-marbles": "^2.5.1",
+    "jest-watch-typeahead": "^0.4.2",
+    "lerna": "^3.20.2",
+    "lint-staged": "^10.0.7",
+    "lodash": "^4.17.15",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "ts-jest": "^25.2.0",
+    "typescript": "^3.7.5"
   },
   "lint-staged": {
     "*.{js}": "eslint"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && lint-staged && yarn test"
-    }
-  },
   "scripts": {
+    "build": "node -r esm scripts/buildTs.js",
+    "watch": "yarn build --watch",
     "lint": "eslint .",
     "lerna": "lerna",
     "lerna:restrap": "yarn && lerna clean --yes && lerna bootstrap",

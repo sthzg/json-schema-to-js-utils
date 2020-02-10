@@ -1,4 +1,4 @@
-import toUpper from 'lodash-es/toUpper';
+import toUpper from 'lodash/toUpper';
 
 export function main() {
   return `

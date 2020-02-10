@@ -5,7 +5,7 @@ exports[`generate-selector-functions should pass example.contact.json integratio
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
-import get from 'lodash-es/get';
+import get from 'lodash/get';
 
 export function byId(property, defaultReturn) {
   return get(property, ['id'], defaultReturn);
@@ -46,7 +46,7 @@ exports[`generate-selector-functions should pass full integration test 1`] = `
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
-import get from 'lodash-es/get';
+import get from 'lodash/get';
 
 export function byLevel1Member1(property, defaultReturn) {
   return get(property, ['level1Member1'], defaultReturn);

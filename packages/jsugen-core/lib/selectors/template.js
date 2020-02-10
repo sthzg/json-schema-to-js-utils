@@ -1,4 +1,4 @@
-import get from 'lodash-es/get';
+import get from 'lodash/get';
 import { DEFAULT_GET_IMPORT } from '../constants';
 
 export function byTemplateRaw(context) {

@@ -4,7 +4,7 @@ import {
   DEFAULT_PRETTIER_OPTIONS,
   withWrite,
 } from '@sthzg/jsugen-core';
-import { fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
+import { $fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
 import { executeMain } from './internals';
 
 export function generate({ sourceFile, writeConfig }) {
@@ -15,7 +15,7 @@ export function generate({ sourceFile, writeConfig }) {
     id: 'generate-from-script',
   });
 
-  return fromSourceFile(sourceFile).pipe(
+  return $fromSourceFile(sourceFile).pipe(
     concatMap(executeMain),
     concatMap(write),
   );

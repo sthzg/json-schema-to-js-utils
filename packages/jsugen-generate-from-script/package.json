@@ -21,8 +21,8 @@
   },
   "dependencies": {
     "@sthzg/jsugen-core": "^0.16.2",
-    "lodash-es": "^4.17.15",
-    "rxjs": "^6.5.3"
+    "lodash": "^4.17.15",
+    "rxjs": "^6.5.4"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"

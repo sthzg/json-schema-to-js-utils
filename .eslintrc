@@ -1,17 +1,47 @@
 {
-  "extends": ["airbnb-base", "prettier"],
+  "extends": ["airbnb-base", "plugin:import/typescript", "prettier"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": ["prettier"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint/eslint-plugin"],
+      "rules": {
+        "@typescript-eslint/array-type": ["error", { "default": "generic" }],
+        "@typescript-eslint/ban-types": "error",
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          { "argsIgnorePattern": "^_" }
+        ],
+        // Since we do `export =`. Remove for Jest 25
+        "import/default": "off",
+        "import/order": "error",
+        "no-dupe-class-members": "off",
+        "no-unused-vars": "off"
+      }
+    }
+  ],
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
     "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
     "function-paren-newline": "off",
     "import/prefer-default-export": "off",
     "import/no-default-export": "error",
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
   "globals": {
     "after": false,

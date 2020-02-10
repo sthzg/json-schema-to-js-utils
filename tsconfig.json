@@ -1,0 +1,14 @@
+{
+  "extends": "./config/tsconfig.base.json",
+  "references": [
+    { "path": "packages/jsugen-cli" },
+    { "path": "packages/jsugen-core" },
+    { "path": "packages/jsugen-generate-builder" },
+    { "path": "packages/jsugen-generate-enums" },
+    { "path": "packages/jsugen-generate-from-script" },
+    { "path": "packages/jsugen-generate-lodash-object-paths" },
+    { "path": "packages/jsugen-generate-member-names" },
+    { "path": "packages/jsugen-generate-selector-functions" },
+    { "path": "packages/jsugen-integration-tests" }
+  ]
+}

@@ -1,8 +1,8 @@
-import camelCase from 'lodash-es/camelCase';
-import flow from 'lodash-es/flow';
-import upperFirst from 'lodash-es/upperFirst';
-import toUpper from 'lodash-es/toUpper';
-import snakeCase from 'lodash-es/snakeCase';
+import camelCase from 'lodash/camelCase';
+import flow from 'lodash/flow';
+import upperFirst from 'lodash/upperFirst';
+import toUpper from 'lodash/toUpper';
+import snakeCase from 'lodash/snakeCase';
 import { UNDERSCORE } from '../constants';
 
 /**
